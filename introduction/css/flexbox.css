@@ -21,7 +21,10 @@ h1 {
 }
 
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 15px;
     margin: 20px 0;
     background-color: #f5f0ff;
@@ -31,13 +34,20 @@ nav {
 nav a {
     color: #6a4bb5;
     text-decoration: none;
-    margin: 0 10px;
+}
+
+body > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 div div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: #f5f0ff;
     padding: 20px;
-    margin: 20px 0;
     border: 1px solid #b9a5e0;
     border-radius: 12px;
 }
@@ -59,16 +69,30 @@ hr {
     display: none;
 }
 
-table {
-    border-collapse: collapse;
+table,
+tbody {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+}
+
+table {
+    border: 1px solid #b9a5e0;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 th,
 td {
-    border: 1px solid #b9a5e0;
+    display: block;
+    flex: 1 1 150px;
     padding: 10px;
     text-align: left;
+    border-bottom: 1px solid #b9a5e0;
 }
 
 th {
@@ -77,16 +101,18 @@ th {
 }
 
 #gallery {
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 #gallery h2,
 #gallery p {
-    text-align: left;
+    width: 100%;
 }
 
 img {
     border: 3px solid #ffd93d;
     border-radius: 10px;
-    margin: 5px;
 }
