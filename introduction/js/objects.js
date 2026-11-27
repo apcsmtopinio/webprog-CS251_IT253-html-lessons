@@ -4,4 +4,4 @@ const car = {
   color:"white"
 };
 
-document.getElementById("demo").innerHTML = "The car type,  model and color is " + car.type +" "  +car.model+" "  +car.color ;
+document.getElementById("demo2").innerHTML = "The car type,  model and color is " + car.type +" "  +car.model+" "  +car.color ;
